@@ -1,0 +1,35 @@
+
+.Background
+{
+    background: #2A2A2A;
+    
+}
+
+.navnav {
+    background:#2A2A2A;
+    top: 0; /* Position the navbar at the top of the page */
+    left:0;
+    margin: 0px;
+    padding:0px;
+    width: 100%; /* Full width */
+    right: 0;
+  }
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: end;
+    width: 960px;
+  }
+
+  textarea {
+    resize: none;
+
+    width: 200px;
+    min-width: 200px;
+    max-width: auto;
+
+    height: 250px;
+    min-height: 250px;
+    max-height: auto;
+  }
