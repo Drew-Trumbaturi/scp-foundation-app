@@ -80,7 +80,7 @@ export default function RecordList() {
                     ? `${scp.description.substring(0, 200)}...`
                     : scp.description}
                 </p>
-                <Link to={`/record/${scp._id}`}>
+                <Link to={`/scp/${scp._id}`}>
                   <button
                     type="button"
                     className="text-light btn btn-primary btn-outline-secondary">
