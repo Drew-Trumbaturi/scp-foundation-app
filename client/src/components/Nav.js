@@ -5,7 +5,7 @@ import Image from "../images/Logo.png";
 function Nav() {
   return (
     <nav
-      className="navbar sticky-top navbar-expand-lg navbar-dark navnav"
+      className="navbar sticky-top navbar-expand-lg navbar-dark navnav justify-content-center"
       style={{ padding: 3 }}>
       <div className="row container-fluid">
         <div className="col-2">
@@ -104,7 +104,7 @@ function Nav() {
         <div className="col-4 d-flex">
           <div id="wrapper" className="justify-content-end">
             <div className="row g-2">
-              <div className="col-10">
+              <div className="col-10 searchBox">
                 <input
                   type="text"
                   className="form-control"

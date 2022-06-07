@@ -56,9 +56,12 @@ recordRoutes.route("/update/:id").post(function (req, response) {
   let myquery = { _id: ObjectId(req.params.id) };
   let newvalues = {
     $set: {
+      item: req.body.item,
       name: req.body.name,
-      position: req.body.position,
-      level: req.body.level,
+      objectclass: req.body.objectclass,
+      image: req.body.image,
+      description: req.body.description,
+      containment: req.body.containment,
     },
   };
 });

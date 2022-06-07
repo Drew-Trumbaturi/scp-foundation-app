@@ -1,29 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Record = (props) => (
-  <div>
-    <p>{props.record.item}</p>
-    <p>{props.record.name}</p>
-    <p>{props.record.objectclass}</p>
-    <p>{props.record.image}</p>
-    <p>{props.record.description}</p>
-    <p>{props.record.containment}</p>
-    <p>
-      <Link className="btn btn-link" to={`/edit/${props.record._id}`}>
-        Edit
-      </Link>{" "}
-      |
-      <button
-        className="btn btn-link"
-        onClick={() => {
-          props.deleteRecord(props.record._id);
-        }}>
-        Delete
-      </button>
-    </p>
-  </div>
-);
+// const Record = (props) => (
+//   <div>
+//     <p>{props.record.item}</p>
+//     <p>{props.record.name}</p>
+//     <p>{props.record.objectclass}</p>
+//     <p>{props.record.image}</p>
+//     <p>{props.record.description}</p>
+//     <p>{props.record.containment}</p>
+//     <p>
+//       <Link className="btn btn-link" to={`/edit/${props.record._id}`}>
+//         Edit
+//       </Link>{" "}
+//       |
+//       <button
+//         className="btn btn-link"
+//         onClick={() => {
+//           props.deleteRecord(props.record._id);
+//         }}>
+//         Delete
+//       </button>
+//     </p>
+//   </div>
+// );
 
 export default function RecordList() {
   const [records, setRecords] = useState([]);
@@ -62,10 +62,10 @@ export default function RecordList() {
   function recordList() {
     return records.map((scp) => {
       return (
-        <div className="col-6">
-          <div key={scp._id} className="mb-2">
+        <div key={scp._id} className="col-6">
+          <div className="mb-2">
             <div className="card bg-dark text-light">
-              <Link to={scp.item}>
+              <Link to={`/scp/${scp._id}`}>
                 <img src={scp.image} className="card-img-top p-1" alt="scp" />
               </Link>
               <hr />

@@ -1,18 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router";
-import FileBase64 from "react-file-base64";
+import { Link } from "react-router-dom";
 
-export default function Edit() {
-  const [form, setForm] = useState({
-    item: "",
-    name: "",
-    objectclass: "",
-    image: "",
-    description: "",
-    containment: "",
+export default function ScpRecord() {
+  const [records, setRecords] = useState([]);
 
-    records: [],
-  });
   const params = useParams();
   const navigate = useNavigate();
 
@@ -36,114 +28,57 @@ export default function Edit() {
         return;
       }
 
-      setForm(record);
+      const records = await response.json();
+      setRecords(records);
+      console.log(records);
     }
 
     fetchData();
 
     return;
-  }, [params.id, navigate]);
+  }, [params.id, navigate, records.length]);
 
-  // These methods will update the state properties.
-  function updateForm(value) {
-    return setForm((prev) => {
-      return { ...prev, ...value };
+  function scpRecord() {
+    return records.map((scp) => {
+      return (
+        <div className="col-6">
+          <div key={scp._id} className="mb-2">
+            <div className="card bg-dark text-light">
+              <Link to={`/scp/${scp._id}`}>
+                <img src={scp.image} className="card-img-top p-1" alt="scp" />
+              </Link>
+              <hr />
+              <div className="card-body p-2">
+                <h4 className="card-title">{scp.name}</h4>
+                <p className="card-title">Item #: {scp.item}</p>
+                <p className="card-text">Objectclass: {scp.objectclass}</p>
+                <hr />
+                <p className="card-text">
+                  Description:{" "}
+                  {scp.description.length > 250
+                    ? `${scp.description.substring(0, 200)}...`
+                    : scp.description}
+                </p>
+                <Link to={`/scp/${scp._id}`}>
+                  <button
+                    type="button"
+                    className="text-light btn btn-primary btn-outline-secondary">
+                    More info
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
     });
   }
 
-  async function onSubmit(e) {
-    e.preventDefault();
-    const editedPerson = {
-      item: form.item,
-      name: form.name,
-      objectclass: form.objectclass,
-      image: form.image,
-      description: form.description,
-      containment: form.containment,
-    };
-
-    // This will send a post request to update the data in the database.
-    await fetch(`http://localhost:5000/update/${params.id}`, {
-      method: "POST",
-      body: JSON.stringify(editedPerson),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    navigate("/");
-  }
-
-  // This following section will display the form that takes input from the user to update the data.
+  // This following section will display the table with the records of individuals.
   return (
-    <div>
-      <h3>Update Record</h3>
-      <form onSubmit={onSubmit}>
-        <div className="form-group mb-3">
-          <label htmlFor="item">Item #</label>
-          <input
-            type="text"
-            className="form-control"
-            id="item"
-            value={form.item}
-            onChange={(e) => updateForm({ item: e.target.value })}
-          />
-        </div>
-        <div className="form-group mb-3">
-          <label htmlFor="name">SCP Name</label>
-          <input
-            type="text"
-            className="form-control"
-            id="name"
-            value={form.name}
-            onChange={(e) => updateForm({ name: e.target.value })}
-          />
-        </div>
-        <div className="form-group mb-3">
-          <label htmlFor="objectclass">SCP Objectclass</label>
-          <input
-            type="text"
-            className="form-control"
-            id="objectclass"
-            value={form.objectclass}
-            onChange={(e) => updateForm({ objectclass: e.target.value })}
-          />
-        </div>
-        <div className="form-group mb-3">
-          <label htmlFor="description">SCP Description</label>
-          <input
-            type="text"
-            className="form-control"
-            id="description"
-            value={form.description}
-            onChange={(e) => updateForm({ description: e.target.value })}
-          />
-        </div>
-        <div className="form-group mb-3">
-          <label htmlFor="containment">SCP Containment</label>
-          <input
-            type="text"
-            className="form-control"
-            id="containment"
-            value={form.containment}
-            onChange={(e) => updateForm({ containment: e.target.value })}
-          />
-        </div>
-
-        <FileBase64
-          multiple={false}
-          onDone={({ base64 }) => updateForm({ image: base64 })}
-        />
-        <br />
-
-        <div className="form-group">
-          <input
-            type="submit"
-            value="Update Record"
-            className="btn btn-primary"
-          />
-        </div>
-      </form>
+    <div className="container text-light">
+      <h3>SCP Catalog List</h3>
+      <div className="row">{scpRecord()}</div>
     </div>
   );
 }

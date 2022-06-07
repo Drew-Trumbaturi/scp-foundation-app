@@ -9,7 +9,7 @@ function Footer() {
           <Link to="/" className="nav-item text-decoration-none">
             <li className="nav-link px-2 text-muted">Home</li>
           </Link>
-          <Link to="/Catalog" className="nav-item text-decoration-none">
+          <Link to="/recordList" className="nav-item text-decoration-none">
             <li className="nav-link px-2 text-muted">Catalog</li>
           </Link>
           <Link to="/Create" className="nav-item text-decoration-none">

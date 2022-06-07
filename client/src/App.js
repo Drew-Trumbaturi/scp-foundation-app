@@ -6,9 +6,10 @@ import { Route, Routes } from "react-router-dom";
 // We import all the components we need in our app
 import Navbar from "./components/Nav";
 import RecordList from "./components/recordList";
-import SCP from "./components/scp";
+import Edit from "./components/edit";
 import Create from "./components/Create";
 import Footer from "./components/Footer";
+import ScpRecord from "./components/scp";
 
 const App = () => {
   return (
@@ -16,9 +17,10 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/scp/:id" element={<SCP />} />
+        <Route path="/edit/:id" element={<Edit />} />
         <Route path="/create" element={<Create />} />
         <Route path="/recordList" element={<RecordList />} />
+        <Route path="/scp/:id" element={<ScpRecord />} />
       </Routes>
       <Footer />
     </div>
