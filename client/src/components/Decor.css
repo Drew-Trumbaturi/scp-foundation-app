@@ -33,3 +33,17 @@
     min-height: 250px;
     max-height: auto;
   }
+  
+  .shortTextArea
+  {
+    width: 400px;
+    min-width: 400px;
+    max-width: auto;
+  }
+
+  .imageFromUser
+  {
+    width: 500px;
+    min-width: 500px;
+    max-width: auto;
+  }
