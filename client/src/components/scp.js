@@ -21,16 +21,17 @@ export default function ScpRecord() {
         return;
       }
 
-      const record = await response.json();
-      if (!record) {
+      const records = await response.json();
+      if (!records) {
         window.alert(`Record with id ${id} not found`);
         navigate("/");
         return;
       }
 
-      const records = await response.json();
-      setRecords(records);
-      console.log(records);
+      if (response.ok) {
+        setRecords(records);
+        console.log(records);
+      }
     }
 
     fetchData();
@@ -38,47 +39,50 @@ export default function ScpRecord() {
     return;
   }, [params.id, navigate, records.length]);
 
-  function scpRecord() {
-    return records.map((scp) => {
-      return (
-        <div className="col-6">
-          <div key={scp._id} className="mb-2">
-            <div className="card bg-dark text-light">
-              <Link to={`/scp/${scp._id}`}>
-                <img src={scp.image} className="card-img-top p-1" alt="scp" />
-              </Link>
-              <hr />
-              <div className="card-body p-2">
-                <h4 className="card-title">{scp.name}</h4>
-                <p className="card-title">Item #: {scp.item}</p>
-                <p className="card-text">Objectclass: {scp.objectclass}</p>
-                <hr />
-                <p className="card-text">
-                  Description:{" "}
-                  {scp.description.length > 250
-                    ? `${scp.description.substring(0, 200)}...`
-                    : scp.description}
-                </p>
-                <Link to={`/scp/${scp._id}`}>
-                  <button
-                    type="button"
-                    className="text-light btn btn-primary btn-outline-secondary">
-                    More info
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
+  const result = Object.keys(records).map((key) => {
+    return { [key]: records[key] };
+  });
+
+  console.log(result);
+
+  // This method will delete a record
+  async function deleteRecord(id) {
+    await fetch(`http://localhost:5000/${id}`, {
+      method: "DELETE",
     });
+
+    const newRecords = records.filter((el) => el._id !== id);
+    setRecords(newRecords);
   }
 
-  // This following section will display the table with the records of individuals.
+  // This following section will display the record of individual scps.
   return (
     <div className="container text-light">
-      <h3>SCP Catalog List</h3>
-      <div className="row">{scpRecord()}</div>
+      <div className="">
+        <img src={records.image} className="" alt="scp" />
+        <h3>Item #: {records.item}</h3>
+        <h3>SCP Name: {records.name}</h3>
+        <h3>SCP Objectclass: {records.objectclass}</h3>
+        <hr />
+        <h4>Description:</h4>
+        <p>{records.description}</p>
+        <hr />
+        <h4>Containment:</h4>
+        <p>{records.containment}</p>
+        <p>
+          <Link className="btn btn-link" to={`/edit/${records._id}`}>
+            Edit
+          </Link>{" "}
+          |
+          <button
+            className="btn btn-link"
+            onClick={() => {
+              deleteRecord(records._id);
+            }}>
+            Delete
+          </button>
+        </p>
+      </div>
     </div>
   );
 }

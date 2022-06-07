@@ -1,30 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// const Record = (props) => (
-//   <div>
-//     <p>{props.record.item}</p>
-//     <p>{props.record.name}</p>
-//     <p>{props.record.objectclass}</p>
-//     <p>{props.record.image}</p>
-//     <p>{props.record.description}</p>
-//     <p>{props.record.containment}</p>
-//     <p>
-//       <Link className="btn btn-link" to={`/edit/${props.record._id}`}>
-//         Edit
-//       </Link>{" "}
-//       |
-//       <button
-//         className="btn btn-link"
-//         onClick={() => {
-//           props.deleteRecord(props.record._id);
-//         }}>
-//         Delete
-//       </button>
-//     </p>
-//   </div>
-// );
-
 export default function RecordList() {
   const [records, setRecords] = useState([]);
 
@@ -47,16 +23,6 @@ export default function RecordList() {
 
     return;
   }, [records.length]);
-
-  // This method will delete a record
-  async function deleteRecord(id) {
-    await fetch(`http://localhost:5000/${id}`, {
-      method: "DELETE",
-    });
-
-    const newRecords = records.filter((el) => el._id !== id);
-    setRecords(newRecords);
-  }
 
   // This method will map out the records on the table
   function recordList() {

@@ -64,6 +64,13 @@ recordRoutes.route("/update/:id").post(function (req, response) {
       containment: req.body.containment,
     },
   };
+  db_connect
+    .collection("scps")
+    .updateOne(myquery, newvalues, function (err, res) {
+      if (err) throw err;
+      console.log("1 document updated");
+      response.json(res);
+    });
 });
 
 // This section will help you delete a record
