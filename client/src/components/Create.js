@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import FileBase64 from "react-file-base64";
 
 export default function Create() {
   const [form, setForm] = useState({
