@@ -57,7 +57,13 @@ export default function ScpRecord() {
 
   // This following section will display the record of individual scps.
   return (
-    <div className="container text-light">
+    <div className="container bg-light p-1 text-light">
+    
+
+    <div className="container">
+      
+      <div className="container mt-3 bg-dark">
+      
       <div className="">
         <img src={records.image} className="" alt="scp" />
         <h3>Item #: {records.item}</h3>
@@ -83,6 +89,10 @@ export default function ScpRecord() {
           </button>
         </p>
       </div>
+      
+      </div>
+      </div>
+      
     </div>
   );
 }

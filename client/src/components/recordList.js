@@ -27,12 +27,12 @@ export default function RecordList() {
   // This method will map out the records on the table
   function recordList() {
     return records.map((scp) => {
-      return (
-        <div key={scp._id} className="col-6">
-          <div className="mb-2">
+      return(
+      <div key={scp._id} className="col-6 p-2 bg-light">
+          
             <div className="card bg-dark text-light">
               <Link to={`/scp/${scp._id}`}>
-                <img src={scp.image} className="card-img-top p-1" alt="scp" />
+                <img src={scp.image} className="card-img-top" alt="scp" />
               </Link>
               <hr />
               <div className="card-body p-2">
@@ -56,7 +56,7 @@ export default function RecordList() {
               </div>
             </div>
           </div>
-        </div>
+
       );
     });
   }
@@ -65,7 +65,14 @@ export default function RecordList() {
   return (
     <div className="container text-light">
       <h3>SCP Catalog List</h3>
-      <div className="row">{recordList()}</div>
+      
+      
+      <div className="p-3">
+      
+      <div className="row mt-3 mb-3">{recordList()}</div>
+      </div>
     </div>
+
+    
   );
 }

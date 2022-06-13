@@ -50,8 +50,9 @@ export default function Create() {
 
   // This following section will display the form that takes the input from the user.
   return (
-  <div className="container text-light mt-3">
-
+  <div className="container p-3 bg-light text-light mt-3 mb-3">
+      
+      <div className="container p-3 bg-dark">
     <h3>Create New SCP Record</h3>
     <form onSubmit={onSubmit}>
 
@@ -99,7 +100,7 @@ export default function Create() {
           </div>
         </div>
         <div className="col-6">
-          <div className="form-group mt-3 p-1">
+          <div className="form-group mt-3">
             <input
               type="file"
               className="form-control imageFromUser"
@@ -130,7 +131,7 @@ export default function Create() {
           onChange={(e) => updateForm({ containment: e.target.value })}
         />
       </div>
-      <div className="form-group mt-3">
+      <div className="form-group p-2 mb-3">
         <input
           type="submit"
           value="Create person"
@@ -138,6 +139,7 @@ export default function Create() {
         />
       </div>
     </form>
+    </div>
   </div>
   );
 }
