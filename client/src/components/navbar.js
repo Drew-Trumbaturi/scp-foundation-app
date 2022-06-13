@@ -13,7 +13,7 @@ export default function Navbar(){
   return (
     <div>
       
-      <nav id={styles["hamburger"]}>
+      <nav>
         <NavLink className="navbar-brand" to="/">
           {/* <img
             style={{ width: 25 + "%" }}
@@ -40,29 +40,8 @@ export default function Navbar(){
               </NavLink>
             </li>
           </ul>
-          <div className="hamburger" onClick={toggleHamburger}>
-            <Hamburger />
-          </div>
         </div>
       </nav>
-      <style jsx>
-      {`
-      .navigation{
-        width:100%;
-        height:50px;
-      }
-      .navigation ul{
-        display: ${hamburgerOpen ? 'inline' : 'none'};
-        height: 100vh;
-        width:50vw;
-        margin-top:50px;
-        position:absolute;
-      }
-      .navigation ul li{
-        list-style-type: none;
-        padding-right: 10px;
-      }
-    `}</style>
     </div>
   );
 }

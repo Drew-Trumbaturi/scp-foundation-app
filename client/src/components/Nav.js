@@ -1,16 +1,12 @@
 import { Link } from "react-router-dom";
 import "./Decor.css";
 import Image from "../images/Logo.png";
-import Hamburger from "./Hamburger";
 
 function Nav() 
   {
-    const [hamburgerOpen,setHamBurgerOpen] = useState(false);
-    const toggleHamburger = () =>{
-      setHamBurgerOpen(!hamburgerOpen)
-    }
+
+    
   return (
-    <div>
     <nav
       className="navbar sticky-top navbar-expand-lg navbar-dark navnav justify-content-center"
       style={{ padding: 3 }}>
@@ -128,32 +124,8 @@ function Nav()
             </div>
           </div>
         </div>
-        <div className="hamburger">
-          <Hamburger />
-        </div>
-      </div>
-    </nav>
-    <style jsx>{`
-    .navigation{
-      width:100%;
-      height:50px;
-
-    }
-    .navigation ul{
-      display:flex;
-      flex-wrap:wrap;
-      float:right;
-      margin:20 0px;
-      padding: 0 25px;
-    }
-    
-    .navigation ul li{
-      list-style-type:none;
-      padding-right: 10px;
-    }
-    
-  `}</style>
     </div>
+    </nav>
   );
 }
 
