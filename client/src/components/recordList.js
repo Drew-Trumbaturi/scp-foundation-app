@@ -43,7 +43,7 @@ export default function RecordList() {
                 <p className="card-text">
                   Description:{" "}
                   {scp.description.length > 250
-                    ? `${scp.description.substring(0, 200)}...`
+                    ? `${scp.description.substring(0, 175)}...`
                     : scp.description}
                 </p>
                 <Link to={`/scp/${scp._id}`}>
@@ -61,7 +61,7 @@ export default function RecordList() {
     });
   }
 
-  // This following section will display the table with the records of individuals.
+  // This following section will display the catalog with the records of individuals.
   return (
     <div className="container text-light">
       <h3>SCP Catalog List</h3>
