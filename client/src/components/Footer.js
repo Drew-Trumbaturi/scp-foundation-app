@@ -24,7 +24,9 @@ function Footer() {
           <li>
             <a
               href="https://scp-wiki.wikidot.com/"
-              className="nav-link px-2 text-muted">
+              className="nav-link px-2 text-muted"
+              target="_blank"
+              rel="noreferrer">
               Big Brother Site
             </a>
           </li>

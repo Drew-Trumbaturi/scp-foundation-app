@@ -65,9 +65,11 @@ function Nav() {
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
-                    <li className="dropdown-item" xhref="#">
-                      SCP-049
-                    </li>
+                    <Link
+                      to="/scp/629ed30f548c12b728568243"
+                      className="text-decoration-none">
+                      <li className="dropdown-item">SCP-049</li>
+                    </Link>
                     <li className="dropdown-item" xhref="#">
                       SCP-169
                     </li>

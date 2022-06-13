@@ -1,4 +1,6 @@
 const express = require("express");
+const mongoose = require("mongoose");
+const SCP = require("../models/scps");
 
 // recordRoutes is an instance of the express router.
 // We use it to define our routes.
@@ -36,15 +38,24 @@ recordRoutes.route("/record/:id").get(function (req, res) {
 // This section will help create a new record
 recordRoutes.route("/record/add").post(function (req, response) {
   let db_connect = dbo.getDb();
-  let myobj = {
+  // let myobj = {
+  //   item: req.body.item,
+  //   name: req.body.name,
+  //   objectclass: req.body.objectclass,
+  //   image: req.body.image,
+  //   description: req.body.description,
+  //   containment: req.body.containment,
+  // };
+  const scp = new SCP({
+    _id: new mongoose.Types.ObjectId(),
     item: req.body.item,
     name: req.body.name,
     objectclass: req.body.objectclass,
     image: req.body.image,
     description: req.body.description,
     containment: req.body.containment,
-  };
-  db_connect.collection("scps").insertOne(myobj, function (err, res) {
+  });
+  db_connect.collection("scps").insertOne(scp, function (err, res) {
     if (err) throw err;
     response.json(res);
   });

@@ -78,6 +78,7 @@ export default function ScpRecord() {
             className="btn btn-link"
             onClick={() => {
               deleteRecord(records._id);
+              navigate("/recordList");
             }}>
             Delete
           </button>
