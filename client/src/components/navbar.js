@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // We import bootstrap to make our application look better.
 import "bootstrap/dist/css/bootstrap.css";
@@ -6,11 +6,14 @@ import "bootstrap/dist/css/bootstrap.css";
 // We import NavLink to utilize the react router.
 import { NavLink } from "react-router-dom";
 
+import styles from "Decor.css";
+
 // Here, we display our Navbar
-export default function Navbar() {
+export default function Navbar(){
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      
+      <nav id={styles["hamburger"]}>
         <NavLink className="navbar-brand" to="/">
           {/* <img
             style={{ width: 25 + "%" }}
@@ -37,8 +40,29 @@ export default function Navbar() {
               </NavLink>
             </li>
           </ul>
+          <div className="hamburger" onClick={toggleHamburger}>
+            <Hamburger />
+          </div>
         </div>
       </nav>
+      <style jsx>
+      {`
+      .navigation{
+        width:100%;
+        height:50px;
+      }
+      .navigation ul{
+        display: ${hamburgerOpen ? 'inline' : 'none'};
+        height: 100vh;
+        width:50vw;
+        margin-top:50px;
+        position:absolute;
+      }
+      .navigation ul li{
+        list-style-type: none;
+        padding-right: 10px;
+      }
+    `}</style>
     </div>
   );
 }

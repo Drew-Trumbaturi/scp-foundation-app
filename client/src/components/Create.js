@@ -50,6 +50,7 @@ export default function Create() {
 
   // This following section will display the form that takes the input from the user.
   return (
+<<<<<<< HEAD
     <div className="container text-light mt-3">
       <h3>Create New SCP Record</h3>
       <form onSubmit={onSubmit}>
@@ -82,6 +83,13 @@ export default function Create() {
             </div>
           </div>
         </div>
+=======
+  <div className="container p-3 bg-light text-light mt-3 mb-3">
+      
+      <div className="container p-3 bg-dark">
+    <h3>Create New SCP Record</h3>
+    <form onSubmit={onSubmit}>
+>>>>>>> 7c29a08de61b86e48a259aef3e927651bf75d17d
 
         <div className="row">
           <div className="col-6">
@@ -128,6 +136,7 @@ export default function Create() {
             onChange={(e) => updateForm({ containment: e.target.value })}
           />
         </div>
+<<<<<<< HEAD
         <div className="form-group mt-3">
           <input
             type="submit"
@@ -137,5 +146,49 @@ export default function Create() {
         </div>
       </form>
     </div>
+=======
+        <div className="col-6">
+          <div className="form-group mt-3">
+            <input
+              type="file"
+              className="form-control imageFromUser"
+              id="image"
+              value={form.image}
+              onChange={(e) => updateForm({ image: e.target.value })}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="form-group mb-3">
+        <label htmlFor="description">SCP Description</label>
+        <textarea
+          type="text"
+          className="form-control"
+          id="description"
+          value={form.description}
+          onChange={(e) => updateForm({ description: e.target.value })}
+        />
+      </div>
+      <div className="form-group mb-3">
+        <label htmlFor="containment">SCP Containment</label>
+        <textarea
+          type="text"
+          className="form-control"
+          id="containment"
+          value={form.containment}
+          onChange={(e) => updateForm({ containment: e.target.value })}
+        />
+      </div>
+      <div className="form-group p-2 mb-3">
+        <input
+          type="submit"
+          value="Create person"
+          className="btn btn-primary"
+        />
+      </div>
+    </form>
+    </div>
+  </div>
+>>>>>>> 7c29a08de61b86e48a259aef3e927651bf75d17d
   );
 }
