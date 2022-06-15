@@ -67,7 +67,7 @@ export default function RecordList() {
 
   // This following section will display the table with the records of individuals.
   return (
-    <div className="container mt-5 text-light">
+    <div className="container mt-4 text-light">
       <h3>SCP Catalog List</h3>
 
       <div className="p-3">
