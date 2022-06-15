@@ -15,17 +15,6 @@ import ScpRecord from "./components/scp";
 import { useEffect, useState } from "react";
 
 const App = () => {
-  const [title, setTitle] = useState("SCP Foundation");
-
-  useEffect(() => {
-    // This will run when the page first loads to home and when the pages changes
-    document.title = title;
-  }, [title]);
-
-  const changeTitle = (e) => {
-    setTitle(e.target.value);
-  };
-
   return (
     <div>
       <Navbar />
