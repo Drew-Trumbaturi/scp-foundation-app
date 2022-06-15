@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 export default function ScpRecord() {
   const [records, setRecords] = useState([]);
-  const [title] = useState("SCP Foundation | SCP Record Catalog");
   const params = useParams();
   const navigate = useNavigate();
 
