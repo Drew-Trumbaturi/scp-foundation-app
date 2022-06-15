@@ -11,6 +11,9 @@ import Create from "./components/Create";
 import Footer from "./components/Footer";
 import ScpRecord from "./components/scp";
 
+// This is for the title to change dynamically
+import { useEffect, useState } from "react";
+
 const App = () => {
   return (
     <div>
@@ -28,6 +31,13 @@ const App = () => {
 };
 
 function Home() {
+  const [title] = useState("SCP Foundation");
+
+  useEffect(() => {
+    // This will run when the page first loads to home and when the pages changes
+    document.title = title;
+  }, [title]);
+
   return (
     <div className="container p-3 bg-light text-light mt-5 mb-3">
       <div className="container p-3 bg-dark">

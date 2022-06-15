@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function ScpRecord() {
   const [records, setRecords] = useState([]);
-
+  const [title] = useState("SCP Foundation | SCP Record Catalog");
   const params = useParams();
   const navigate = useNavigate();
 
@@ -38,6 +38,10 @@ export default function ScpRecord() {
 
     return;
   }, [params.id, navigate, records.length]);
+
+  useEffect(() => {
+    document.title = `SCP Foundation | ${records.item}`;
+  });
 
   const result = Object.keys(records).map((key) => {
     return { [key]: records[key] };

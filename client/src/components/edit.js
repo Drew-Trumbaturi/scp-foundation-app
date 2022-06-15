@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 
 export default function Edit() {
+  const [title] = useState("SCP Foundation | SCP Edit");
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
   const [form, setForm] = useState({
     item: "",
     name: "",

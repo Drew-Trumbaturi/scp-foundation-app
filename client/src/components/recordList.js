@@ -5,13 +5,6 @@ export default function RecordList() {
   const [records, setRecords] = useState([]);
   const [title, setTitle] = useState("SCP Foundation | SCP Record Catalog");
 
-  useEffect(() => {
-    // This will run when the page first loads to home and when the pages changes
-    document.title = title;
-  }, [title]);
-
-  setTitle(title);
-
   // This method fetches the records from the database.
   useEffect(() => {
     async function getRecords() {
@@ -29,6 +22,8 @@ export default function RecordList() {
       setRecords(records);
     }
 
+    document.title = title;
+    setTitle(title);
     getRecords();
 
     return;
