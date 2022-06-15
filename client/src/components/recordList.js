@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 
 export default function RecordList() {
   const [records, setRecords] = useState([]);
+  const [title, setTitle] = useState("SCP Foundation | SCP Record Catalog");
+
+  useEffect(() => {
+    // This will run when the page first loads to home and when the pages changes
+    document.title = title;
+  }, [title]);
+
+  setTitle(title);
 
   // This method fetches the records from the database.
   useEffect(() => {

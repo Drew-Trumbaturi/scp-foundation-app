@@ -31,30 +31,10 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route
-          path="/edit/:id"
-          element={<Edit />}
-          onChange={changeTitle}
-          value={title}
-        />
-        <Route
-          path="/create"
-          element={<Create />}
-          onChange={changeTitle}
-          value={title}
-        />
-        <Route
-          path="/recordList"
-          element={<RecordList />}
-          onChange={changeTitle}
-          value={title}
-        />
-        <Route
-          path="/scp/:id"
-          element={<ScpRecord />}
-          onChange={changeTitle}
-          value={title}
-        />
+        <Route path="/edit/:id" element={<Edit />} />
+        <Route path="/create" element={<Create />} />
+        <Route path="/recordList" element={<RecordList />} />
+        <Route path="/scp/:id" element={<ScpRecord />} />
       </Routes>
       <Footer />
     </div>
