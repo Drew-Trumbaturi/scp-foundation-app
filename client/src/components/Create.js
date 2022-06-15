@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router";
 
 export default function Create() {
-  const [title] = useState("SCP Foundation | SCP Submit");
+  document.title = "SCP Foundation | SCP Submit";
   const [form, setForm] = useState({
     item: "",
     name: "",
@@ -19,10 +19,6 @@ export default function Create() {
       return { ...prev, ...value };
     });
   }
-
-  useEffect(() => {
-    document.title = title;
-  }, [title]);
 
   // This function will handle the submission.
   async function onSubmit(e) {

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function RecordList() {
+  document.title = "SCP Foundation | SCP Record Catalog";
   const [records, setRecords] = useState([]);
-  const [title] = useState("SCP Foundation | SCP Record Catalog");
 
   // This method fetches the records from the database.
   useEffect(() => {
@@ -22,7 +22,6 @@ export default function RecordList() {
       setRecords(records);
     }
 
-    document.title = title;
     getRecords();
 
     return;
