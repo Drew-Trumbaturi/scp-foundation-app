@@ -11,9 +11,6 @@ import Create from "./components/Create";
 import Footer from "./components/Footer";
 import ScpRecord from "./components/scp";
 
-// This is for the title to change dynamically
-import { useEffect, useState } from "react";
-
 const App = () => {
   return (
     <div>
