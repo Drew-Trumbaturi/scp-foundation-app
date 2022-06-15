@@ -11,16 +11,50 @@ import Create from "./components/Create";
 import Footer from "./components/Footer";
 import ScpRecord from "./components/scp";
 
+// This is for the title to change dynamically
+import { useEffect, useState } from "react";
+
 const App = () => {
+  const [title, setTitle] = useState("SCP Foundation");
+
+  useEffect(() => {
+    // This will run when the page first loads to home and when the pages changes
+    document.title = title;
+  }, [title]);
+
+  const changeTitle = (e) => {
+    setTitle(e.target.value);
+  };
+
   return (
     <div>
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/edit/:id" element={<Edit />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/recordList" element={<RecordList />} />
-        <Route path="/scp/:id" element={<ScpRecord />} />
+        <Route
+          path="/edit/:id"
+          element={<Edit />}
+          onChange={changeTitle}
+          value={title}
+        />
+        <Route
+          path="/create"
+          element={<Create />}
+          onChange={changeTitle}
+          value={title}
+        />
+        <Route
+          path="/recordList"
+          element={<RecordList />}
+          onChange={changeTitle}
+          value={title}
+        />
+        <Route
+          path="/scp/:id"
+          element={<ScpRecord />}
+          onChange={changeTitle}
+          value={title}
+        />
       </Routes>
       <Footer />
     </div>
