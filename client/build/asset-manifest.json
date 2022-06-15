@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.59d42575.css",
+    "main.js": "/static/js/main.58d7f961.js",
+    "static/media/SCP-004.png": "/static/media/SCP-004.615dd1ed0fcf9e9aa045.png",
+    "static/media/SCP-006.png": "/static/media/SCP-006.f4324daa9779d38d016b.png",
+    "static/media/scp003.png": "/static/media/scp003.6fde75a200efc6c40938.png",
+    "static/media/SCP-005.png": "/static/media/SCP-005.f76e5f5fe1459ba12e1c.png",
+    "static/media/SCP002.png": "/static/media/SCP002.b1ea81eabc3d91ce52bb.png",
+    "static/media/scp-054.jpg": "/static/media/scp-054.08b55b90f73c25adae88.jpg",
+    "static/media/scp-999.jpg": "/static/media/scp-999.6a3dd2ad773d04809eea.jpg",
+    "static/media/scp049.PNG": "/static/media/scp049.9442c445a30b4762e547.PNG",
+    "static/media/scp-logo-int.png": "/static/media/scp-logo-int.5a83dbac386be9725b19.png",
+    "index.html": "/index.html",
+    "main.59d42575.css.map": "/static/css/main.59d42575.css.map",
+    "main.58d7f961.js.map": "/static/js/main.58d7f961.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59d42575.css",
+    "static/js/main.58d7f961.js"
+  ]
+}

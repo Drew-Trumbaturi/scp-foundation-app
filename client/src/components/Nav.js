@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Decor.css";
-import Image from "../images/Logo.png";
+import Image from "./images/Logo.png";
 import Hamburger from "./Hamburger";
 
 function Nav() {
@@ -11,7 +11,7 @@ function Nav() {
   return (
     <div>
       <nav
-        className="navbar sticky-top navbar-expand-lg navbar-dark navnav justify-content-center"
+        className="navbar fixed-top navbar-expand-lg navbar-dark navnav justify-content-center"
         style={{ padding: 3 }}>
         <div className="row container-fluid">
           <div className="col-2">
@@ -32,26 +32,17 @@ function Nav() {
           <div className="col-6">
             <div className="d-flex justify-content-center">
               <ul className="nav">
-                <Link
-                  to="/"
-                  className="nav-item"
-                  style={{ textDecoration: "none" }}>
+                <Link to="/" className="nav-item">
                   <li className="nav-link text-light">Home</li>
                 </Link>
-                <Link
-                  to="#"
-                  className="nav-item"
-                  style={{ textDecoration: "none" }}>
+                <Link to="#" className="nav-item">
                   <li className="nav-link text-light">About</li>
                 </Link>
-                <Link
-                  to="/Create"
-                  className="nav-item"
-                  style={{ textDecoration: "none" }}>
+                <Link to="/Create" className="nav-item">
                   <li className="nav-link text-light">Submit SCP</li>
                 </Link>
                 <div>
-                  <li className="nav-item dropdown">
+                  <li className=" dropdown">
                     <li
                       className="nav-link dropdown-toggle text-decoration-none text-light"
                       xhref="#"
@@ -73,35 +64,35 @@ function Nav() {
                       <Link
                         to="/scp/629ed30f548c12b728568243"
                         className="text-decoration-none">
-                        <li className="dropdown-item" xhref="#">
+                        <li className="dropdown-item nav-item" xhref="#">
                           SCP-049
                         </li>
                       </Link>
-                      <li className="dropdown-item" xhref="#">
+                      <li className="dropdown-item nav-item" xhref="#">
                         SCP-169
                       </li>
-                      <li className="dropdown-item" xhref="#">
+                      <li className="dropdown-item nav-item" xhref="#">
                         SCP-420
                       </li>
-                      <li className="dropdown-item" xhref="#">
+                      <li className="dropdown-item nav-item" xhref="#">
                         SCP-957
                       </li>
-                      <li className="dropdown-item" xhref="#">
+                      <li className="dropdown-item nav-item" xhref="#">
                         SCP-999
                       </li>
                       <li>
                         <hr className="dropdown-divider" />
                       </li>
                       <Link className="text-decoration-none" to="/recordList">
-                        <li className="dropdown-item">All SCPs</li>
+                        <li className="dropdown-item nav-item">All SCPs</li>
                       </Link>
-                      <li className="dropdown-item" xhref="#">
+                      <li className="dropdown-item nav-item" xhref="#">
                         Today's SCP Picks
                       </li>
-                      <li className="dropdown-item" xhref="#">
+                      <li className="dropdown-item nav-item" xhref="#">
                         New SCP Entries
                       </li>
-                      <li className="dropdown-item" xhref="#">
+                      <li className="dropdown-item nav-item" xhref="#">
                         Random SCP
                       </li>
                     </ul>

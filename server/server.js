@@ -25,3 +25,7 @@ app.listen(port, () => {
 app.get("/", (req, res) => {
   res.send("Hello form Express!");
 });
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("../client/build"));
+}

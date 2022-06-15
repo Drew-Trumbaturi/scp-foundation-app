@@ -27,31 +27,9 @@ const App = () => {
   );
 };
 
-// export default App;
-
-//import SCP from "./components/SCP";
-// import Nav from "./components/Nav";
-// import Footer from "./components/Footer";
-
-//import React, { useState } from 'react';
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-// function App() {
-//   return (
-//     <Router>
-//       <Nav />
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         {/* <Route path="/SCP" element={<SCP />} /> */}
-//       </Routes>
-//       <Footer />
-//     </Router>
-//   );
-// }
-
 function Home() {
   return (
-    <div className="container p-3 bg-light text-light mt-3 mb-3">
+    <div className="container p-3 bg-light text-light mt-5 mb-3">
       <div className="container p-3 bg-dark">
         <h1>SCP Foundation</h1>
         <p className="container p-4 justify">

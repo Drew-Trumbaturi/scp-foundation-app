@@ -32,8 +32,8 @@ export default function RecordList() {
           <div className="card bg-dark text-light">
             <Link to={`/scp/${scp._id}`}>
               <img
-                src={`../images/${scp.image}`}
-                className="card-img-top"
+                src={require(`./images/${scp.image}`)}
+                className="card-img-top CatalogImages"
                 alt="scp-pictures"
               />
             </Link>
@@ -46,7 +46,7 @@ export default function RecordList() {
               <p className="card-text">
                 Description:{" "}
                 {scp.description.length > 250
-                  ? `${scp.description.substring(0, 200)}...`
+                  ? `${scp.description.substring(0, 175)}...`
                   : scp.description}
               </p>
               <Link to={`/scp/${scp._id}`}>
@@ -65,7 +65,7 @@ export default function RecordList() {
 
   // This following section will display the table with the records of individuals.
   return (
-    <div className="container text-light">
+    <div className="container mt-5 text-light">
       <h3>SCP Catalog List</h3>
 
       <div className="p-3">
