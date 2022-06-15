@@ -61,7 +61,7 @@ export default function ScpRecord() {
         <div className="container mt-3 bg-dark">
           <div className="">
             <img
-              src={`images/${records.image}`}
+              src={`build/images/${records.image}`}
               className="card-img"
               alt="scp-pictures"
             />
