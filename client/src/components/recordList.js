@@ -36,7 +36,7 @@ export default function RecordList() {
             <Link to={`/scp/${scp._id}`}>
               <img
                 src={`../images/${scp.image}`}
-                className="card-img-top"
+                className="card-img-top CatalogImages"
                 alt="scp-pictures"
               />
             </Link>

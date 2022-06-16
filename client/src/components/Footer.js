@@ -6,22 +6,24 @@ function Footer() {
     <div className="container">
       <footer className="py-3 my-4">
         <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-          <Link to="/" className="nav-item text-decoration-none">
+          <Link to="/" className="nav-item-footer text-decoration-none">
             <li className="nav-link px-2 text-muted">Home</li>
           </Link>
-          <Link to="/recordList" className="nav-item text-decoration-none">
+          <Link
+            to="/recordList"
+            className="nav-item-footer text-decoration-none">
             <li className="nav-link px-2 text-muted">Catalog</li>
           </Link>
-          <Link to="/Create" className="nav-item text-decoration-none">
+          <Link to="/Create" className="nav-item-footer text-decoration-none">
             <li className="nav-link px-2 text-muted">Submit SCPs</li>
           </Link>
-          <Link to="/Contact" className="nav-item text-decoration-none">
+          <Link to="/Contact" className="nav-item-footer text-decoration-none">
             <li className="nav-link px-2 text-muted">Contact</li>
           </Link>
-          <Link to="/AboutUs" className="nav-item text-decoration-none">
+          <Link to="/AboutUs" className="nav-item-footer text-decoration-none">
             <li className="nav-link px-2 text-muted">About</li>
           </Link>
-          <li>
+          <li className="nav-item-footer">
             <a
               href="https://scp-wiki.wikidot.com/"
               className="nav-link px-2 text-muted"
