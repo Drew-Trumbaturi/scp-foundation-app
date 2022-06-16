@@ -9,7 +9,7 @@ export default function RecordList() {
   useEffect(() => {
     async function getRecords() {
       const response = await fetch(
-        `http://localhost:5000/record/`
+        `https://scp-foundation-app.herokuapp.com/record/`
         );
       
 
