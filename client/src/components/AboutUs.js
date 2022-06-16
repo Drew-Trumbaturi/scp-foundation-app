@@ -10,7 +10,7 @@ function AboutUs() {
       <div className="container p-3 bg-dark">
         <h2>About the Doobleton Productions Team</h2>
         <h5>Introducation written by our Administrator.</h5>
-        <p className="xSmall AUMar">
+        <p className="small AUMar">
           &nbsp;A quick introduction about our agents who put together and
           created the website. These agents are Drew Trumbaturi and Michael
           Paton. It was written in the final statement from the True American
@@ -26,7 +26,7 @@ function AboutUs() {
           that down please, Michael!) these two still continue to undergo
           investigations of these anomalous creatures.
         </p>
-        <p className="xSmall AUMar">
+        <p className="small AUMar">
           Mankind in its present state has been around for a quarter of a
           million years, yet only a small fraction of that have been of any
           significance. So, what did we do for nearly 250,000 years? We huddled
@@ -46,10 +46,10 @@ function AboutUs() {
         </p>
         <h5>The Agents</h5>
         <div className="row">
-          <p className="xSmall col-3">
+          <p className="small  Ahlb col-3">
             <span className="med bold">TRUMBATURI, Drew</span>
             <br />
-            <span className="xxsmall">
+            <span className="xsmall">
               Back End Lead, Front End Dev and Production Leader.
             </span>
             <br /> <br />
@@ -62,18 +62,19 @@ function AboutUs() {
             <b>Location of Birth</b>: Redacted, AMERICA.
             <br />
             <b>Nationality</b>: Filthy Conservative American.
-          </p>
+            </p>
           <img
-            className="xSmall col-3 vl"
+            className="col-3 vlr"
             src={Image1}
             style={{ height: "250px", width: "250px" }}
-            alt="Drew Trumbaturi"
+            alt="Drew Trumbaturi" 
           />
+        
 
-          <p className="xSmall col-3">
+          <p className="small col-3">
             <span className="med bold">PATON, Michael</span>
             <br />
-            <span className="xxsmall">
+            <span className="xsmall">
               Front End Lead, Writer Lead and Production Dev.
             </span>
             <br /> <br />
@@ -86,15 +87,15 @@ function AboutUs() {
             <b>Location of Birth</b>: Whakatane, NEW ZEALAND.
             <br />
             <b>Nationality</b>: Libtard NZ European.
-          </p>
+            </p>
           <img
-            className="col-3 xSmall"
+            className="col-3"
             src={Image2}
             style={{ height: "250px", width: "250px" }}
             alt="Michael Paton"
           />
           <div className="seperate hl"></div>
-          <p className="xSmall">
+          <p className="small">
             <h4>About the SCP Foundation Team</h4>
             <span className="med">Mission Statement</span>
             <br />

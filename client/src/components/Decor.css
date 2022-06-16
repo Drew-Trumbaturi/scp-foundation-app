@@ -129,33 +129,52 @@ body{
   display: grid;
 }
 
-.xSmall
+.small
 {
-  font-size: small;
-  margin: .5rem 0rem .5rem 0rem;
-  
+  font-size: 0.9rem;
+  justify-content: center;
+  word-wrap: break-word;
 }
 .med{
-  font-size:medium;
+  font-size:1.2rem;
+  justify-content: center;
+  word-wrap: break-word;
 }
 
 .AUMar{
   margin: 2rem 0rem 2rem 0rem;
 }
 .vl{
-  border-right:1px solid  white;
-  height: 300px;
+  border-left:1px solid  white;
+  height: 360px;
 }
 .bold{
   font-weight: bold;
 }
+.xsmall{
+  font-size:0.8rem;
+  justify-content: center;
+  word-wrap: break-word;
+}
 .xxsmall{
-  font-size:65%;
+  font-size: 0.7rem;
+  justify-content: center;
+  word-wrap: break-word;
 }
 .hl{
   border-top:2px solid white;
   width: 100%;
 }
+
+
+
+@media (max-width: 1204px) {
+  .vl{
+    border-left: none !important;
+  }  
+  
+}
+
 .seperate{
   margin: 3rem 0rem 0rem 0rem;
 }
@@ -178,20 +197,24 @@ body{
 }
 
 .deleteButton{
-  appearance: none;
-  color: white;
-  background-color: red;
-  padding: 10px 20px;
-  font-size: x-small;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
   margin: 0rem 0rem 2rem 0.5rem;
   text-align: justify;
   text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  isolation: isolate;
+  appearance: none;
+  color: white;
+  cursor:pointer;
+  font-size: small;
+  padding: 10px 20px;
+  background-color: red;
+  border: 1px solid currentColor;
+  border-radius: 0.210em;
 }
 
-.ripple-button{
+.the-button{
   display: inline-grid;
   text-decoration: none;
   position: relative;
@@ -201,19 +224,9 @@ body{
   cursor:pointer;
   font-size: small;
   padding: 10px 20px;
-  background-color: transparent;
+  background-color: rgba(30, 121, 226, 0.4);
+  
   text-transform: uppercase;
   border: 5px solid currentColor;
-  border-radius: 0.125em;
-}
-
-.ripple-button::before{
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 140px;
-  height: 50px;
-  aspect-ratio: 1/1;
-  background-color: rgb(30, 121, 226);
-  opacity: 0.25;
+  border-radius: 0.210em;
 }

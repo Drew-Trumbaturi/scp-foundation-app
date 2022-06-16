@@ -9,8 +9,9 @@ export default function RecordList() {
   useEffect(() => {
     async function getRecords() {
       const response = await fetch(
-        `https://scp-foundation-app.herokuapp.com/record/`
-      );
+        `http://localhost:5000/record/`
+        );
+      
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
@@ -53,7 +54,7 @@ export default function RecordList() {
                   : scp.description}
               </p>
               <Link className="text-decoration-none" to={`/scp/${scp._id}`}>
-                <button type="button" className="ripple-button">
+                <button type="button" className="the-button">
                   More info
                 </button>
               </Link>

@@ -5,9 +5,9 @@ import Image from "./images/Logo.png";
 function Nav() {
   return (
     <div>
-      <nav className="navbar fixed-top navbar-expand-xxl navbar-dark navnav justify-content-center">
+      <nav className="navbar fixed-top navbar-expand-lg navbar-dark navnav justify-content-center">
         <div className="row container-fluid">
-          <div className="col-2">
+          <div className="col-2" style={{padding:3}}>
             <div id="wrapper">
               <Link to="/" className="text-white text-decoration-none">
                 <div className="row">

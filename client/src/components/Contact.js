@@ -10,7 +10,7 @@ function Contact() {
         <div className="seperate hl"></div>
         <br />
         <div className="row">
-          <p className="col-2 xSmall AUMar">
+          <p className="col-2 Med AUMar">
             70 Windermere Drive, Poike, Tauranga 3112
           </p>
           <div
@@ -30,9 +30,9 @@ function Contact() {
           <p className="col-4 Med bold">Michael Paton's Email:</p>
         </div>
         <div className="row">
-          <p className="xSmall col-4">07-571 0190</p>
-          <p className="xSmall col-4">30042619@student.toiohomai.ac.nz</p>
-          <p className="xSmall col-4">30051225@student.toiohomai.ac.nz</p>
+          <p className="xxsmall col-4">07-571 0190</p>
+          <p className="xxsmall col-4">30042619@student.toiohomai.ac.nz</p>
+          <p className="xxsmall col-4">30051225@student.toiohomai.ac.nz</p>
         </div>
       </div>
     </div>
