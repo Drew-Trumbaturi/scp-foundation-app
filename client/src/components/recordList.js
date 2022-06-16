@@ -43,14 +43,17 @@ export default function RecordList() {
             </Link>
             <hr />
             <div className="card-body p-2">
-              <h4 className="card-title">{scp.name}</h4>
+              <h4 className="card-title">{scp.name.length > 35 
+              ? `${scp.name.substring(0,30)}...`
+              : scp.name}
+              </h4>
               <p className="card-title">Item #: {scp.item}</p>
               <p className="card-text">Objectclass: {scp.objectclass}</p>
               <hr />
               <p className="card-text">
                 Description:{" "}
                 {scp.description.length > 250
-                  ? `${scp.description.substring(0, 200)}...`
+                  ? `${scp.description.substring(0, 175)}...`
                   : scp.description}
               </p>
               <Link className="text-decoration-none" to={`/scp/${scp._id}`}>
