@@ -146,7 +146,7 @@ body{
 }
 .vl{
   border-left:1px solid  white;
-  height: 360px;
+  height: fit-content;
 }
 .bold{
   font-weight: bold;
@@ -171,6 +171,7 @@ body{
 @media (max-width: 1204px) {
   .vl{
     border-left: none !important;
+    height: fit-content;
   }  
   
 }
