@@ -170,8 +170,7 @@ body{
 
 @media (max-width: 1204px) {
   .vl{
-    border-left: none !important;
-    height: fit-content;
+    border-left: none;
   }  
   
 }
