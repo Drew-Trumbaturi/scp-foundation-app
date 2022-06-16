@@ -7,7 +7,7 @@ function Nav() {
     <div>
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark navnav justify-content-center">
         <div className="row container-fluid">
-          <div className="col-2" style={{padding:3}}>
+          <div className="col-4" style={{padding:3}}>
             <div id="wrapper">
               <Link to="/" className="text-white text-decoration-none">
                 <div className="row">
@@ -27,7 +27,7 @@ function Nav() {
             aria-expanded="false"
             aria-label="Toggle navigation"></button>
           <div
-            className="col-4 justify-content-end collapse navbar-collapse"
+            className="col-8 justify-content-start collapse navbar-collapse"
             id="navbarSupportedContent">
             <div className="d-flex position-relative">
               <ul className="nav">
@@ -106,26 +106,6 @@ function Nav() {
                   </ul>
                 </li>
               </ul>
-            </div>
-            <div className="col-6 d-flex mx-3">
-              <div id="wrapper" className="d-flex justify-content-end">
-                <div className="row g-2">
-                  <div className="col-10 searchBox">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Search"
-                    />
-                  </div>
-                  <div className="col-2">
-                    <button
-                      type="submit"
-                      className="btn btn-danger btn-outline-light">
-                      Submit
-                    </button>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

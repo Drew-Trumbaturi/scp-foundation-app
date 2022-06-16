@@ -123,7 +123,7 @@ export default function Create() {
             <input
               type="submit"
               value="Create Anomalous Creature"
-              className="btn btn-primary"
+              className="the-button"
             />
           </div>
         </form>
