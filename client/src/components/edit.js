@@ -133,17 +133,6 @@ export default function Edit() {
           />
         </div>
 
-        <div className="form-group mb-3">
-          <input
-            type="file"
-            className="form-control"
-            id="image"
-            value={form.image}
-            onChange={(e) => updateForm({ image: e.target.value })}
-          />
-        </div>
-        <br />
-
         <div className="form-group">
           <input
             type="submit"
