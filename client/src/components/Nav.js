@@ -68,18 +68,36 @@ function Nav() {
                           SCP-049
                         </li>
                       </Link>
-                      <li className="dropdown-item nav-item" xhref="#">
-                        SCP-169
-                      </li>
-                      <li className="dropdown-item nav-item" xhref="#">
-                        SCP-420
-                      </li>
-                      <li className="dropdown-item nav-item" xhref="#">
-                        SCP-957
-                      </li>
-                      <li className="dropdown-item nav-item" xhref="#">
-                        SCP-999
-                      </li>
+                      <Link
+                        to="/scp/62aa8a1b06211237617e2db1"
+                        className="text-decoration-none">
+                        <li className="dropdown-item nav-item" xhref="#">
+                          SCP-169
+                        </li>
+                      </Link>
+                      <Link
+                        to="/scp/62aa8af506211237617e2db2"
+                        className="text-decoration-none">
+                        <li className="dropdown-item nav-item" xhref="#">
+                          SCP-420
+                        </li>
+                      </Link>
+                      <Link
+                        to="/scp/62aa8dfb06211237617e2db3"
+                        className="text-decoration-none">
+                        <li className="dropdown-item nav-item" xhref="#">
+                          SCP-957
+                        </li>
+                      </Link>
+
+                      <Link
+                        to="/scp/62aa8e8606211237617e2db4"
+                        className="text-decoration-none">
+                        <li className="dropdown-item nav-item" xhref="#">
+                          SCP-999
+                        </li>
+                      </Link>
+
                       <li>
                         <hr className="dropdown-divider" />
                       </li>
