@@ -77,38 +77,51 @@ export default function Edit() {
 
   // This following section will display the form that takes input from the user to update the data.
   return (
-    <div className="container text-light">
+    <div className="container p-3 bg-light text-light mt-3 mb-3">
+      <div className="container p-3 bg-dark">
       <h3>Update Record</h3>
       <form onSubmit={onSubmit}>
+      <div className="row">
+            <div className="col-12">
         <div className="form-group mb-3">
           <label htmlFor="item">Item #</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control shortTextArea"
             id="item"
             value={form.item}
             onChange={(e) => updateForm({ item: e.target.value })}
           />
         </div>
+        </div>
+        </div>
+        <div className="row">
+            <div className="col-12">
         <div className="form-group mb-3">
           <label htmlFor="name">SCP Name</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control shortTextArea"
             id="name"
             value={form.name}
             onChange={(e) => updateForm({ name: e.target.value })}
           />
         </div>
+        </div>
+        </div>
+        <div className="row">
+            <div className="col-12">
         <div className="form-group mb-3">
           <label htmlFor="objectclass">SCP Objectclass</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control shortTextArea"
             id="objectclass"
             value={form.objectclass}
             onChange={(e) => updateForm({ objectclass: e.target.value })}
           />
+        </div>
+        </div>
         </div>
         <div className="form-group mb-3">
           <label htmlFor="description">SCP Description</label>
@@ -135,10 +148,11 @@ export default function Edit() {
           <input
             type="submit"
             value="Update Record"
-            className="btn btn-primary"
+            className="the-button"
           />
         </div>
       </form>
+    </div>
     </div>
   );
 }

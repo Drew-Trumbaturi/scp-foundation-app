@@ -46,7 +46,7 @@ function AboutUs() {
         </p>
         <h5>The Agents</h5>
         <div className="row">
-          <p className="small  Ahlb col-3">
+          <p className="small col-3">
             <span className="med bold">TRUMBATURI, Drew</span>
             <br />
             <span className="xsmall">
@@ -64,14 +64,14 @@ function AboutUs() {
             <b>Nationality</b>: Filthy Conservative American.
             </p>
           <img
-            className="col-3 vlr"
+            className="col-3"
             src={Image1}
             style={{ height: "250px", width: "250px" }}
             alt="Drew Trumbaturi" 
           />
         
 
-          <p className="small col-3">
+          <p className="vl small col-3">
             <span className="med bold">PATON, Michael</span>
             <br />
             <span className="xsmall">

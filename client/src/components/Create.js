@@ -86,7 +86,7 @@ export default function Create() {
           </div>
 
           <div className="row">
-            <div className="col-6">
+            <div className="col-12">
               <div className="form-group mb-3">
                 <label htmlFor="objectclass">SCP Objectclass</label>
                 <input
