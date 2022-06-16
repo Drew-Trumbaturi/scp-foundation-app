@@ -5,9 +5,9 @@ import Image from "./images/Logo.png";
 function Nav() {
   return (
     <div>
-      <nav className="navbar fixed-top navbar-expand-lg navbar-dark navnav justify-content-center">
+      <nav className="navbar fixed-top navbar-expand-xl navbar-dark navnav justify-content-center">
         <div className="row container-fluid">
-          <div className="col-4" style={{padding:3}}>
+          <div className="col-4" style={{ padding: 3 }}>
             <div id="wrapper">
               <Link to="/" className="text-white text-decoration-none">
                 <div className="row">
@@ -67,32 +67,32 @@ function Nav() {
                       </li>
                     </Link>
                     <Link
-                    to="/scp/62aa8a1b06211237617e2db1"
-                    className="text-decoration-none">
-                    <li className="dropdown-item nav-item" xhref="#">
-                      SCP-169
-                    </li>
+                      to="/scp/62aa8a1b06211237617e2db1"
+                      className="text-decoration-none">
+                      <li className="dropdown-item nav-item" xhref="#">
+                        SCP-169
+                      </li>
                     </Link>
                     <Link
-                    to="/scp/62aa8af506211237617e2db2"
-                    className="text-decoration-none">
-                    <li className="dropdown-item nav-item" xhref="#">
-                      SCP-420
-                    </li>
+                      to="/scp/62aa8af506211237617e2db2"
+                      className="text-decoration-none">
+                      <li className="dropdown-item nav-item" xhref="#">
+                        SCP-420
+                      </li>
                     </Link>
                     <Link
-                    to="/scp/62aa8dfb06211237617e2db3"
-                    className="text-decoration-none">
-                    <li className="dropdown-item nav-item" xhref="#">
-                      SCP-957
-                    </li>
+                      to="/scp/62aa8dfb06211237617e2db3"
+                      className="text-decoration-none">
+                      <li className="dropdown-item nav-item" xhref="#">
+                        SCP-957
+                      </li>
                     </Link>
                     <Link
-                    to="/scp/62aa8e8606211237617e2db4"
-                    className="text-decoration-none">
-                    <li className="dropdown-item nav-item" xhref="#">
-                      SCP-999
-                    </li>
+                      to="/scp/62aa8e8606211237617e2db4"
+                      className="text-decoration-none">
+                      <li className="dropdown-item nav-item" xhref="#">
+                        SCP-999
+                      </li>
                     </Link>
                     <li>
                       <hr className="dropdown-divider" />
