@@ -188,12 +188,18 @@ body{
   color: white;
   background-color: green;
   padding: 10px 20px;
-  font-size: x-small;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 0rem 0rem 2rem 0rem;
+  margin: 0rem 0rem 2rem 0.5rem;
   text-align: justify;
+  text-transform: uppercase;
+  position: relative;
+  isolation: isolate;
+  appearance: none;
+  cursor:pointer;
+  font-size: small;
+  border: 1px solid currentColor;
+  border-radius: 0.210em;
 }
 
 .deleteButton{
