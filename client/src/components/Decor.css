@@ -71,6 +71,11 @@
     transform-origin: left;
   }
 
+  .navbar-toggler-icon {
+    border: none;
+    
+  }
+
   textarea {
     resize: none;
 
