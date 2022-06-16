@@ -12,7 +12,7 @@ export default function ScpRecord() {
     async function fetchData() {
       const id = params.id.toString();
       const response = await fetch(
-        `http://localhost:5000/record/${params.id.toString()}`
+        `https://scp-foundation-app.herokuapp.com/record/${params.id.toString()}`
       );
 
       if (!response.ok) {
@@ -47,7 +47,7 @@ export default function ScpRecord() {
 
   // This method will delete a record
   async function deleteRecord(id) {
-    await fetch(`http://localhost:5000/${id}`, {
+    await fetch(`https://scp-foundation-app.herokuapp.com/${id}`, {
       method: "DELETE",
     });
 

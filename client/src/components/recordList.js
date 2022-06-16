@@ -12,7 +12,7 @@ export default function RecordList() {
   // This method fetches the records from the database.
   useEffect(() => {
     async function getRecords() {
-      const response = await fetch(`http://localhost:5000/record/`);
+      const response = await fetch(`https://scp-foundation-app.herokuapp.com/record/`);
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
