@@ -7,7 +7,7 @@ function AboutUs(){
     return(
         <div className="container p-3 bg-light text-light mt-3 mb-3">
         <div className="container p-3 bg-dark">
-                    <h2>About the Dobbleton Productions Team</h2>
+                    <h2>About the Doobleton Productions Team</h2>
                     <h5>Introducation written by our Administrator.</h5>
                     <p className="xSmall AUMar">&nbsp;A quick introduction about our agents who put together and created the website. These agents are Drew Trumbaturi and Michael Paton. It was written in the final statement from the True American President Ronald Reagan that these two were to be picked. A smart move from the Hollywood Actor/Union Leader/Most Handsome Man to ever Live/Best Governor of California/Best and 40th President of the United States as these lads are dumb enough to risk their lives for the good of America and her people, and I guess the world too. These agents must document, experiment and contain the anomalous creatures with the help of the other, definitely more intelligent, agents around the world. Now working under the former Vice President and unfortunately President, I meant brilliant President... Joe Biden...(Don't write that down please, Michael!) these two still continue to undergo investigations of these anomalous creatures.</p>
                     <p className="xSmall AUMar">Mankind in its present state has been around for a quarter of a million years, yet only a small fraction of that have been of any significance.
