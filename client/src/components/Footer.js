@@ -6,25 +6,25 @@ function Footer() {
     <div className="container">
       <footer className="py-3 my-4">
         <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-          <Link to="/" className="text-decoration-none">
-            <li className="nav-item-footer px-2 text-muted">Home</li>
+          <Link to="/" className="nav-item text-decoration-none">
+            <li className="nav-link px-2 text-muted">Home</li>
           </Link>
-          <Link to="/recordList" className="text-decoration-none">
-            <li className="nav-item-footer px-2 text-muted">Catalog</li>
+          <Link to="/recordList" className="nav-item text-decoration-none">
+            <li className="nav-link px-2 text-muted">Catalog</li>
           </Link>
-          <Link to="/Create" className="text-decoration-none">
-            <li className="nav-item-footer px-2 text-muted">Submit SCPs</li>
+          <Link to="/Create" className="nav-item text-decoration-none">
+            <li className="nav-link px-2 text-muted">Submit SCPs</li>
           </Link>
-          <Link to="/Contact" className="text-decoration-none">
-            <li className="nav-item-footer px-2 text-muted">Contact</li>
+          <Link to="/Contact" className="nav-item text-decoration-none">
+            <li className="nav-link px-2 text-muted">Contact</li>
           </Link>
-          <Link to="/About" className="text-decoration-none">
-            <li className="nav-item-footer px-2 text-muted">About</li>
+          <Link to="/AboutUs" className="nav-item text-decoration-none">
+            <li className="nav-link px-2 text-muted">About</li>
           </Link>
           <li>
             <a
               href="https://scp-wiki.wikidot.com/"
-              className="nav-item-footer px-2 text-muted"
+              className="nav-link px-2 text-muted"
               target="_blank"
               rel="noreferrer">
               Big Brother Site

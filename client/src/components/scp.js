@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function ScpRecord() {
   const [records, setRecords] = useState([]);
+
   const params = useParams();
   const navigate = useNavigate();
 
@@ -11,7 +12,7 @@ export default function ScpRecord() {
     async function fetchData() {
       const id = params.id.toString();
       const response = await fetch(
-        `https://scp-foundation-app.herokuapp.com/record/${params.id.toString()}`
+        `http://localhost:5000/record/${params.id.toString()}`
       );
 
       if (!response.ok) {
@@ -38,18 +39,15 @@ export default function ScpRecord() {
     return;
   }, [params.id, navigate, records.length]);
 
-  useEffect(() => {
-    document.title = `SCP Foundation | ${records.item}`;
-  });
-
   const result = Object.keys(records).map((key) => {
     return { [key]: records[key] };
   });
+
   console.log(result);
 
   // This method will delete a record
   async function deleteRecord(id) {
-    await fetch(`https://scp-foundation-app.herokuapp.com/${id}`, {
+    await fetch(`http://localhost:5000/${id}`, {
       method: "DELETE",
     });
 
@@ -59,41 +57,42 @@ export default function ScpRecord() {
 
   // This following section will display the record of individual scps.
   return (
-    <div className="container mt-5 bg-light p-1 text-light">
-      <div className="container">
-        <div className="container mt-3 bg-dark">
-          <div className="">
-            <img
-              src={`images/${records.image}`}
-              className="card-img"
-              alt="scp-pictures"
-            />
-            <h3>Item #: {records.item}</h3>
-            <h3>SCP Name: {records.name}</h3>
-            <h3>SCP Objectclass: {records.objectclass}</h3>
-            <hr />
-            <h4>Description:</h4>
-            <p>{records.description}</p>
-            <hr />
-            <h4>Containment:</h4>
-            <p>{records.containment}</p>
-            <p>
-              <Link className="btn btn-link" to={`/edit/${records._id}`}>
-                Edit
-              </Link>{" "}
-              |
-              <button
-                className="btn btn-link"
-                onClick={() => {
-                  deleteRecord(records._id);
-                  navigate("/recordList");
-                }}>
-                Delete
-              </button>
-            </p>
-          </div>
-        </div>
+    <div className="container bg-light p-1 text-light">
+    
+
+    <div className="container">
+      
+      <div className="container mt-3 bg-dark">
+      
+      <div className="">
+        <img src={records.image} className="" alt="scp" />
+        <h3>Item #: {records.item}</h3>
+        <h3>SCP Name: {records.name}</h3>
+        <h3>SCP Objectclass: {records.objectclass}</h3>
+        <hr />
+        <h4>Description:</h4>
+        <p>{records.description}</p>
+        <hr />
+        <h4>Containment:</h4>
+        <p>{records.containment}</p>
+        <p>
+          <Link className="btn editButton" to={`/edit/${records._id}`}>
+            Edit
+          </Link>{" "}
+          <span className="vl2"/>
+          <button
+            className="btn deleteButton"
+            onClick={() => {
+              deleteRecord(records._id);
+            }}>
+            Delete
+          </button>
+          </p>
       </div>
+      
+      </div>
+      </div>
+      
     </div>
   );
 }

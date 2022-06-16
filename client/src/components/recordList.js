@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+
+
+
 export default function RecordList() {
-  document.title = "SCP Foundation | SCP Record Catalog";
+
+
   const [records, setRecords] = useState([]);
 
   // This method fetches the records from the database.
   useEffect(() => {
     async function getRecords() {
-      const response = await fetch(
-        `https://scp-foundation-app.herokuapp.com/record/`
-      );
+      const response = await fetch(`http://localhost:5000/record/`);
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
@@ -31,12 +33,13 @@ export default function RecordList() {
   function recordList() {
     return records.map((scp) => {
       return (
+        
         <div key={scp._id} className="col-6 p-2 bg-light">
           <div className="card bg-dark text-light">
             <Link to={`/scp/${scp._id}`}>
               <img
-                src={require(`./images/${scp.image}`)}
-                className="card-img-top CatalogImages"
+                src={`../images/${scp.image}`}
+                className="card-img-top"
                 alt="scp-pictures"
               />
             </Link>
@@ -49,13 +52,13 @@ export default function RecordList() {
               <p className="card-text">
                 Description:{" "}
                 {scp.description.length > 250
-                  ? `${scp.description.substring(0, 175)}...`
+                  ? `${scp.description.substring(0, 200)}...`
                   : scp.description}
               </p>
-              <Link to={`/scp/${scp._id}`}>
+              <Link className="text-decoration-none" to={`/scp/${scp._id}`}>
                 <button
                   type="button"
-                  className="text-light btn btn-primary btn-outline-secondary">
+                  className="ripple-button">
                   More info
                 </button>
               </Link>
@@ -68,7 +71,7 @@ export default function RecordList() {
 
   // This following section will display the table with the records of individuals.
   return (
-    <div className="container mt-4 text-light">
+    <div className="container text-light">
       <h3>SCP Catalog List</h3>
 
       <div className="p-3">

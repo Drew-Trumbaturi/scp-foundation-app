@@ -21,7 +21,6 @@
     justify-content: end;
     width: 960px;
   }
-
   .CatalogImages {
     width: 100%;
     height: 20rem;
@@ -118,3 +117,98 @@
   }
 }
 
+body{
+  margin-top: 4rem;
+  font-family: Courier New, Courier, monospace;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 25%);
+  display: grid;
+}
+
+.xSmall
+{
+  font-size: x-small;
+  margin: .5rem 0rem .5rem 0rem;
+  
+}
+.med{
+  font-size:medium;
+}
+
+.AUMar{
+  margin: 2rem 0rem 2rem 0rem;
+}
+.vl{
+  border-right:1px solid  white;
+  height: 300px;
+}
+.bold{
+  font-weight: bold;
+}
+.xxsmall{
+  font-size:65%;
+}
+.hl{
+  border-top:2px solid white;
+  width: 100%;
+}
+.seperate{
+  margin: 3rem 0rem 0rem 0rem;
+}
+.vl2{
+  border-left:.09rem solid  white;
+  vertical-align:top;
+  line-height: 2em;
+}
+
+.editButton{
+  color: white;
+  background-color: green;
+  padding: 10px 20px;
+  font-size: x-small;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0rem 0rem 2rem 0rem;
+  text-align: justify;
+}
+
+.deleteButton{
+  appearance: none;
+  color: white;
+  background-color: red;
+  padding: 10px 20px;
+  font-size: x-small;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0rem 0rem 2rem 0.5rem;
+  text-align: justify;
+  text-transform: uppercase;
+}
+
+.ripple-button{
+  display: inline-grid;
+  text-decoration: none;
+  position: relative;
+  isolation: isolate;
+  appearance: none;
+  color: hsl(200, 100%, 65%);
+  cursor:pointer;
+  font-size: small;
+  padding: 10px 20px;
+  background-color: transparent;
+  text-transform: uppercase;
+  border: 5px solid currentColor;
+  border-radius: 0.125em;
+}
+
+.ripple-button::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 140px;
+  height: 50px;
+  aspect-ratio: 1/1;
+  background-color: rgb(30, 121, 226);
+  opacity: 0.25;
+}

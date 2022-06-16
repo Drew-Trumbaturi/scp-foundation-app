@@ -1,5 +1,6 @@
 import React from "react";
 
+
 // We use Route in order to define the different routes of our application
 import { Route, Routes } from "react-router-dom";
 
@@ -10,9 +11,8 @@ import Edit from "./components/edit";
 import Create from "./components/Create";
 import Footer from "./components/Footer";
 import ScpRecord from "./components/scp";
-
-// This is for the title to change dynamically
-import { useEffect, useState } from "react";
+import AboutUs from "./components/AboutUs";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
@@ -20,26 +20,43 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route path="/aboutUs" element={<AboutUs/>}/>
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/create" element={<Create />} />
         <Route path="/recordList" element={<RecordList />} />
         <Route path="/scp/:id" element={<ScpRecord />} />
+        <Route path="/contact" element={<Contact/>}/>
       </Routes>
       <Footer />
     </div>
   );
 };
 
+// export default App;
+
+//import SCP from "./components/SCP";
+// import Nav from "./components/Nav";
+// import Footer from "./components/Footer";
+
+//import React, { useState } from 'react';
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// function App() {
+//   return (
+//     <Router>
+//       <Nav />
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         {/* <Route path="/SCP" element={<SCP />} /> */}
+//       </Routes>
+//       <Footer />
+//     </Router>
+//   );
+// }
+
 function Home() {
-  const [title] = useState("SCP Foundation");
-
-  useEffect(() => {
-    // This will run when the page first loads to home and when the pages changes
-    document.title = title;
-  }, [title]);
-
   return (
-    <div className="container p-3 bg-light text-light mt-5 mb-3">
+    <div className="container p-3 bg-light text-light mt-3 mb-3">
       <div className="container p-3 bg-dark">
         <h1>SCP Foundation</h1>
         <p className="container p-4 justify">
