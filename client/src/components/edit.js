@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 
 export default function Edit() {
+  document.title = "SCP Foundation | SCP Edit";
   const [form, setForm] = useState({
     item: "",
     name: "",
@@ -62,13 +63,16 @@ export default function Edit() {
     };
 
     // This will send a post request to update the data in the database.
-    await fetch(`https://scp-foundation-app.herokuapp.com/update/${params.id}`, {
-      method: "POST",
-      body: JSON.stringify(editedPerson),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    await fetch(
+      `https://scp-foundation-app.herokuapp.com/update/${params.id}`,
+      {
+        method: "POST",
+        body: JSON.stringify(editedPerson),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     navigate(`/scp/${params.id}`);
   }

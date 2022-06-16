@@ -39,6 +39,10 @@ export default function ScpRecord() {
     return;
   }, [params.id, navigate, records.length]);
 
+  useEffect(() => {
+    document.title = `SCP Foundation | ${records.item}`;
+  });
+
   const result = Object.keys(records).map((key) => {
     return { [key]: records[key] };
   });
@@ -58,41 +62,35 @@ export default function ScpRecord() {
   // This following section will display the record of individual scps.
   return (
     <div className="container bg-light p-1 text-light">
-    
-
-    <div className="container">
-      
-      <div className="container mt-3 bg-dark">
-      
-      <div className="">
-        <img src={records.image} className="" alt="scp" />
-        <h3>Item #: {records.item}</h3>
-        <h3>SCP Name: {records.name}</h3>
-        <h3>SCP Objectclass: {records.objectclass}</h3>
-        <hr />
-        <h4>Description:</h4>
-        <p>{records.description}</p>
-        <hr />
-        <h4>Containment:</h4>
-        <p>{records.containment}</p>
-        <p>
-          <Link className="btn editButton" to={`/edit/${records._id}`}>
-            Edit
-          </Link>{" "}
-          <span className="vl2"/>
-          <button
-            className="btn deleteButton"
-            onClick={() => {
-              deleteRecord(records._id);
-            }}>
-            Delete
-          </button>
-          </p>
+      <div className="container">
+        <div className="container mt-3 bg-dark">
+          <div className="">
+            <img src={records.image} className="" alt="scp" />
+            <h3>Item #: {records.item}</h3>
+            <h3>SCP Name: {records.name}</h3>
+            <h3>SCP Objectclass: {records.objectclass}</h3>
+            <hr />
+            <h4>Description:</h4>
+            <p>{records.description}</p>
+            <hr />
+            <h4>Containment:</h4>
+            <p>{records.containment}</p>
+            <p>
+              <Link className="btn editButton" to={`/edit/${records._id}`}>
+                Edit
+              </Link>{" "}
+              <span className="vl2" />
+              <button
+                className="btn deleteButton"
+                onClick={() => {
+                  deleteRecord(records._id);
+                }}>
+                Delete
+              </button>
+            </p>
+          </div>
+        </div>
       </div>
-      
-      </div>
-      </div>
-      
     </div>
   );
 }

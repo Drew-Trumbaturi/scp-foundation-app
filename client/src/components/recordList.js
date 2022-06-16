@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-
-
-
 export default function RecordList() {
-
-
+  document.title = "SCP Foundation | SCP Record Catalog";
   const [records, setRecords] = useState([]);
 
   // This method fetches the records from the database.
   useEffect(() => {
     async function getRecords() {
-      const response = await fetch(`https://scp-foundation-app.herokuapp.com/record/`);
+      const response = await fetch(
+        `https://scp-foundation-app.herokuapp.com/record/`
+      );
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
@@ -33,7 +31,6 @@ export default function RecordList() {
   function recordList() {
     return records.map((scp) => {
       return (
-        
         <div key={scp._id} className="col-6 p-2 bg-light">
           <div className="card bg-dark text-light">
             <Link to={`/scp/${scp._id}`}>
@@ -56,9 +53,7 @@ export default function RecordList() {
                   : scp.description}
               </p>
               <Link className="text-decoration-none" to={`/scp/${scp._id}`}>
-                <button
-                  type="button"
-                  className="ripple-button">
+                <button type="button" className="ripple-button">
                   More info
                 </button>
               </Link>
