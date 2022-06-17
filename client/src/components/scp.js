@@ -77,6 +77,7 @@ export default function ScpRecord() {
                     : `../images/${records.image}`
                 }
                 alt="scp"
+                className="w-auto h-100"
               />
             </div>
             <h3>Item #: {records.item}</h3>
