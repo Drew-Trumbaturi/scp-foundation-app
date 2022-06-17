@@ -33,6 +33,17 @@ recordRoutes.route("/record/:id").get(function (req, res) {
   });
 });
 
+// This section will help get a random single record by id
+recordRoutes.route("/random").get(function (req, res) {
+  let db_connect = dbo.getDb();
+  db_connect
+    .collection("scps")
+    .aggregate([{ $sample: { size: 1 } }], function (err, result) {
+      if (err) throw err;
+      res.json(result);
+    });
+});
+
 // This section will help create a new record
 recordRoutes.route("/record/add").post(function (req, response) {
   let db_connect = dbo.getDb();

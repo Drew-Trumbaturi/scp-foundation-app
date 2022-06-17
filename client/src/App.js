@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import ScpRecord from "./components/scp";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";
+import RandomScp from "./components/randomscp";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/create" element={<Create />} />
         <Route path="/recordList" element={<RecordList />} />
         <Route path="/scp/:id" element={<ScpRecord />} />
+        <Route path="/randomscp" element={<RandomScp />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
