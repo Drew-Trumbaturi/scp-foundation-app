@@ -40,8 +40,6 @@ export default function Edit() {
     }
 
     fetchData();
-    navigate("/recordList");
-
     return;
   }, [params.id, navigate]);
 
@@ -146,7 +144,6 @@ export default function Edit() {
               onChange={(e) => updateForm({ containment: e.target.value })}
             />
           </div>
-
           <div className="form-group">
             <input type="submit" value="Update Record" className="the-button" />
           </div>
