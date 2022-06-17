@@ -46,7 +46,7 @@ export default function Create() {
       description: "",
       containment: "",
     });
-    navigate("/");
+    navigate("/recordList");
   }
 
   // This following section will display the form that takes the input from the user.

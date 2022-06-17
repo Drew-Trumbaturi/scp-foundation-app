@@ -57,6 +57,8 @@ export default function ScpRecord() {
 
     const newRecords = records.filter((el) => el._id !== id);
     setRecords(newRecords);
+
+    navigate("/recordList");
   }
 
   // This following section will display the record of individual scps.

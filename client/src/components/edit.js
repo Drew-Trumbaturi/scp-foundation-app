@@ -40,6 +40,7 @@ export default function Edit() {
     }
 
     fetchData();
+    navigate("/recordList");
 
     return;
   }, [params.id, navigate]);
@@ -63,7 +64,9 @@ export default function Edit() {
     };
 
     // This will send a post request to update the data in the database.
-    await fetch(`https://scp-foundation-app.herokuapp.com/update/${params.id}`, {
+    await fetch(
+      `https://scp-foundation-app.herokuapp.com/update/${params.id}`,
+      {
         method: "POST",
         body: JSON.stringify(editedPerson),
         headers: {
@@ -79,80 +82,76 @@ export default function Edit() {
   return (
     <div className="container p-3 bg-light text-light mt-3 mb-3">
       <div className="container p-3 bg-dark">
-      <h3>Update Record</h3>
-      <form onSubmit={onSubmit}>
-      <div className="row">
+        <h3>Update Record</h3>
+        <form onSubmit={onSubmit}>
+          <div className="row">
             <div className="col-12">
-        <div className="form-group mb-3">
-          <label htmlFor="item">Item #</label>
-          <input
-            type="text"
-            className="form-control shortTextArea"
-            id="item"
-            value={form.item}
-            onChange={(e) => updateForm({ item: e.target.value })}
-          />
-        </div>
-        </div>
-        </div>
-        <div className="row">
+              <div className="form-group mb-3">
+                <label htmlFor="item">Item #</label>
+                <input
+                  type="text"
+                  className="form-control shortTextArea"
+                  id="item"
+                  value={form.item}
+                  onChange={(e) => updateForm({ item: e.target.value })}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="row">
             <div className="col-12">
-        <div className="form-group mb-3">
-          <label htmlFor="name">SCP Name</label>
-          <input
-            type="text"
-            className="form-control shortTextArea"
-            id="name"
-            value={form.name}
-            onChange={(e) => updateForm({ name: e.target.value })}
-          />
-        </div>
-        </div>
-        </div>
-        <div className="row">
+              <div className="form-group mb-3">
+                <label htmlFor="name">SCP Name</label>
+                <input
+                  type="text"
+                  className="form-control shortTextArea"
+                  id="name"
+                  value={form.name}
+                  onChange={(e) => updateForm({ name: e.target.value })}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="row">
             <div className="col-12">
-        <div className="form-group mb-3">
-          <label htmlFor="objectclass">SCP Objectclass</label>
-          <input
-            type="text"
-            className="form-control shortTextArea"
-            id="objectclass"
-            value={form.objectclass}
-            onChange={(e) => updateForm({ objectclass: e.target.value })}
-          />
-        </div>
-        </div>
-        </div>
-        <div className="form-group mb-3">
-          <label htmlFor="description">SCP Description</label>
-          <textarea
-            type="text"
-            className="form-control"
-            id="description"
-            value={form.description}
-            onChange={(e) => updateForm({ description: e.target.value })}
-          />
-        </div>
-        <div className="form-group mb-3">
-          <label htmlFor="containment">SCP Containment</label>
-          <textarea
-            type="text"
-            className="form-control"
-            id="containment"
-            value={form.containment}
-            onChange={(e) => updateForm({ containment: e.target.value })}
-          />
-        </div>
+              <div className="form-group mb-3">
+                <label htmlFor="objectclass">SCP Objectclass</label>
+                <input
+                  type="text"
+                  className="form-control shortTextArea"
+                  id="objectclass"
+                  value={form.objectclass}
+                  onChange={(e) => updateForm({ objectclass: e.target.value })}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="form-group mb-3">
+            <label htmlFor="description">SCP Description</label>
+            <textarea
+              type="text"
+              className="form-control"
+              id="description"
+              value={form.description}
+              onChange={(e) => updateForm({ description: e.target.value })}
+            />
+          </div>
+          <div className="form-group mb-3">
+            <label htmlFor="containment">SCP Containment</label>
+            <textarea
+              type="text"
+              className="form-control"
+              id="containment"
+              value={form.containment}
+              onChange={(e) => updateForm({ containment: e.target.value })}
+            />
+          </div>
 
-        <div className="form-group">
-          <input
-            type="submit"
-            value="Update Record"
-            className="the-button"
-          />
-        </div>
-      </form>
-    </div>
+          <div className="form-group">
+            <input type="submit" value="Update Record" className="the-button" />
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
