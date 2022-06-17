@@ -10,8 +10,7 @@ export default function RecordList() {
     async function getRecords() {
       const response = await fetch(
         `https://scp-foundation-app.herokuapp.com/record/`
-        );
-      
+      );
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
@@ -36,16 +35,21 @@ export default function RecordList() {
           <div className="card bg-dark text-light">
             <Link to={`/scp/${scp._id}`}>
               <img
-                src={`../images/${scp.image}`}
+                src={
+                  scp.image === ""
+                    ? "../images/Logo.png"
+                    : `../images/${scp.image}`
+                }
                 className="card-img-top CatalogImages"
                 alt="scp-pictures"
               />
             </Link>
             <hr />
             <div className="card-body p-2">
-              <h4 className="card-title">{scp.name.length > 40 
-              ? `${scp.name.substring(0,35)}...`
-              : scp.name}
+              <h4 className="card-title">
+                {scp.name.length > 40
+                  ? `${scp.name.substring(0, 35)}...`
+                  : scp.name}
               </h4>
               <p className="card-title">Item #: {scp.item}</p>
               <p className="card-text">Objectclass: {scp.objectclass}</p>
