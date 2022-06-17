@@ -34,7 +34,7 @@ recordRoutes.route("/record/:id").get(function (req, res) {
 });
 
 // This section will help get a random single record by id
-recordRoutes.route("/random").get(function (req, res) {
+recordRoutes.route("/random/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
   db_connect
     .collection("scps")

@@ -26,7 +26,7 @@ const App = () => {
         <Route path="/create" element={<Create />} />
         <Route path="/recordList" element={<RecordList />} />
         <Route path="/scp/:id" element={<ScpRecord />} />
-        <Route path="/randomscp" element={<RandomScp />} />
+        <Route path="/randomscp/:id" element={<RandomScp />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

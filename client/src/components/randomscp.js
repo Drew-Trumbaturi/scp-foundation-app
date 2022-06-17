@@ -16,7 +16,7 @@ export default function ScpRecord() {
     async function fetchData() {
       const id = params.id.toString();
       const response = await fetch(
-        `https://scp-foundation-app.herokuapp.com/random/`
+        `https://scp-foundation-app.herokuapp.com/random/${params.id.toString()}`
       );
 
       if (!response.ok) {
