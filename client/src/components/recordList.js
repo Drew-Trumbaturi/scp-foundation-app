@@ -46,7 +46,7 @@ export default function RecordList() {
                     ? "../images/Logo.png"
                     : `../images/${scp.image}`
                 }
-                className="card-img-top img-fluid"
+                className="card-img-top CatalogImages"
                 alt="scp-pictures"
               />
             </Link>
