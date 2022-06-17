@@ -136,11 +136,6 @@ function Nav() {
                       to="/recordList">
                       <li className="dropdown-item nav-item">All SCPs</li>
                     </Link>
-                    <Link to="/randomscp/:id" className="text-decoration-none">
-                      <li className="dropdown-item nav-item" xhref="#">
-                        Random SCP
-                      </li>
-                    </Link>
                   </ul>
                 </li>
               </ul>
