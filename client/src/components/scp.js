@@ -68,8 +68,8 @@ export default function ScpRecord() {
     <div className="container bg-light p-1 text-light">
       <div className="container">
         <div className="container mt-3 bg-dark">
-          <div>
-            <div className="w-auto h-100">
+          <div className="card">
+            <div className="card-img-top">
               <img
                 src={
                   records.image === ""
