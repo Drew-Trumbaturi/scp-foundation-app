@@ -3,6 +3,12 @@ import { useParams, useNavigate } from "react-router";
 
 export default function Edit() {
   document.title = "SCP Foundation | SCP Edit";
+
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   const [form, setForm] = useState({
     item: "",
     name: "",

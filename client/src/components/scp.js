@@ -4,9 +4,13 @@ import { Link } from "react-router-dom";
 
 export default function ScpRecord() {
   const [records, setRecords] = useState([]);
-
   const params = useParams();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
 
   useEffect(() => {
     async function fetchData() {

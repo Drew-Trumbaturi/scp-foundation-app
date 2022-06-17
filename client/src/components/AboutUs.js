@@ -2,9 +2,16 @@ import React from "react";
 import "./Decor.css";
 import Image1 from "./images/Drew.jpg";
 import Image2 from "./images/Michael.png";
+import { useEffect } from "react";
 
 function AboutUs() {
   document.title = "SCP Foundation | SCP About";
+
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className="container p-3 bg-light text-light mt-3 mb-3">
       <div className="container p-3 bg-dark">
@@ -62,14 +69,13 @@ function AboutUs() {
             <b>Location of Birth</b>: Redacted, AMERICA.
             <br />
             <b>Nationality</b>: Filthy Conservative American.
-            </p>
+          </p>
           <img
             className="col-3"
             src={Image1}
             style={{ height: "250px", width: "250px" }}
-            alt="Drew Trumbaturi" 
+            alt="Drew Trumbaturi"
           />
-        
 
           <p className="vl small col-3">
             <span className="med bold">PATON, Michael</span>
@@ -87,7 +93,7 @@ function AboutUs() {
             <b>Location of Birth</b>: Whakatane, NEW ZEALAND.
             <br />
             <b>Nationality</b>: Libtard NZ European.
-            </p>
+          </p>
           <img
             className="col-3"
             src={Image2}

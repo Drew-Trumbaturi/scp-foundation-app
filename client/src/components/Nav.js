@@ -25,19 +25,35 @@ function Nav() {
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
-            aria-label="Toggle navigation"></button>
+            aria-label="Toggle navigation"
+            id="close-button"></button>
           <div
             className="col-8 justify-content-start collapse navbar-collapse"
             id="navbarSupportedContent">
             <div className="d-flex position-relative">
               <ul className="nav">
-                <Link to="/" className="nav-item">
+                <Link
+                  onClick={() => {
+                    document.getElementById("close-button").click();
+                  }}
+                  to="/"
+                  className="nav-item">
                   <li className="nav-link text-light">Home</li>
                 </Link>
-                <Link to="/AboutUs" className="nav-item">
+                <Link
+                  onClick={() => {
+                    document.getElementById("close-button").click();
+                  }}
+                  to="/AboutUs"
+                  className="nav-item">
                   <li className="nav-link text-light">About</li>
                 </Link>
-                <Link to="/Create" className="nav-item">
+                <Link
+                  onClick={() => {
+                    document.getElementById("close-button").click();
+                  }}
+                  to="/Create"
+                  className="nav-item">
                   <li className="nav-link text-light">Submit SCP</li>
                 </Link>
                 <li className="nav-item dropdown">
@@ -60,6 +76,9 @@ function Nav() {
                       <hr className="dropdown-divider" />
                     </li>
                     <Link
+                      onClick={() => {
+                        document.getElementById("close-button").click();
+                      }}
                       to="/scp/629ed30f548c12b728568243"
                       className="text-decoration-none">
                       <li className="dropdown-item nav-item" xhref="#">
@@ -67,6 +86,9 @@ function Nav() {
                       </li>
                     </Link>
                     <Link
+                      onClick={() => {
+                        document.getElementById("close-button").click();
+                      }}
                       to="/scp/62aa8a1b06211237617e2db1"
                       className="text-decoration-none">
                       <li className="dropdown-item nav-item" xhref="#">
@@ -74,6 +96,9 @@ function Nav() {
                       </li>
                     </Link>
                     <Link
+                      onClick={() => {
+                        document.getElementById("close-button").click();
+                      }}
                       to="/scp/62aa8af506211237617e2db2"
                       className="text-decoration-none">
                       <li className="dropdown-item nav-item" xhref="#">
@@ -81,6 +106,9 @@ function Nav() {
                       </li>
                     </Link>
                     <Link
+                      onClick={() => {
+                        document.getElementById("close-button").click();
+                      }}
                       to="/scp/62aa8dfb06211237617e2db3"
                       className="text-decoration-none">
                       <li className="dropdown-item nav-item" xhref="#">
@@ -88,6 +116,9 @@ function Nav() {
                       </li>
                     </Link>
                     <Link
+                      onClick={() => {
+                        document.getElementById("close-button").click();
+                      }}
                       to="/scp/62aa8e8606211237617e2db4"
                       className="text-decoration-none">
                       <li className="dropdown-item nav-item" xhref="#">
@@ -97,7 +128,12 @@ function Nav() {
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
-                    <Link className="text-decoration-none" to="/recordList">
+                    <Link
+                      onClick={() => {
+                        document.getElementById("close-button").click();
+                      }}
+                      className="text-decoration-none"
+                      to="/recordList">
                       <li className="dropdown-item nav-item">All SCPs</li>
                     </Link>
                     <li className="dropdown-item nav-item" xhref="#">

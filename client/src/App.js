@@ -36,6 +36,11 @@ function Home() {
   const [title] = useState("SCP Foundation");
 
   useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
+  useEffect(() => {
     // This will run when the page first loads to home and when the pages changes
     document.title = title;
   }, [title]);

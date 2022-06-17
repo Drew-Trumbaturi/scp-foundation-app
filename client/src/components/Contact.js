@@ -1,8 +1,15 @@
 import React from "react";
 import "./Decor.css";
+import { useEffect } from "react";
 
 function Contact() {
   document.title = "SCP Foundation | SCP Contact";
+
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className="container p-3 bg-light text-light mt-3 mb-3">
       <div className="container p-3 bg-dark">
