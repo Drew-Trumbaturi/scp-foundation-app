@@ -68,18 +68,16 @@ export default function ScpRecord() {
     <div className="container bg-light p-1 text-light">
       <div className="container">
         <div className="container mt-3 bg-dark">
-          <div className="card">
-            <div className="card-img-top">
-              <img
-                src={
-                  records.image === ""
-                    ? "../images/Logo.png"
-                    : `../images/${records.image}`
-                }
-                alt="scp"
-                className="w-auto h-100"
-              />
-            </div>
+          <div>
+            <img
+              src={
+                records.image === ""
+                  ? "../images/Logo.png"
+                  : `../images/${records.image}`
+              }
+              alt="scp"
+              className="image-fluid"
+            />
             <h3>Item #: {records.item}</h3>
             <h3>SCP Name: {records.name}</h3>
             <h3>SCP Objectclass: {records.objectclass}</h3>
