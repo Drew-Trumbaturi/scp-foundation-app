@@ -15,7 +15,7 @@ const ObjectId = require("mongodb").ObjectId;
 recordRoutes.route("/record").get(function (req, res) {
   let db_connect = dbo.getDb("scp");
   db_connect
-    .collection("test-scp")
+    .collection("scps")
     .find({})
     .toArray(function (err, result) {
       if (err) throw err;
@@ -27,7 +27,7 @@ recordRoutes.route("/record").get(function (req, res) {
 recordRoutes.route("/record/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
-  db_connect.collection("test-scp").findOne(myquery, function (err, result) {
+  db_connect.collection("scps").findOne(myquery, function (err, result) {
     if (err) throw err;
     res.json(result);
   });
@@ -44,7 +44,7 @@ recordRoutes.route("/record/add").post(function (req, response) {
     description: req.body.description,
     containment: req.body.containment,
   };
-  db_connect.collection("test-scp").insertOne(myobj, function (err, res) {
+  db_connect.collection("scps").insertOne(myobj, function (err, res) {
     if (err) throw err;
     response.json(res);
   });
@@ -65,7 +65,7 @@ recordRoutes.route("/update/:id").post(function (req, response) {
     },
   };
   db_connect
-    .collection("test-scp")
+    .collection("scps")
     .updateOne(myquery, newvalues, function (err, res) {
       if (err) throw err;
       console.log("1 document updated");
@@ -77,7 +77,7 @@ recordRoutes.route("/update/:id").post(function (req, response) {
 recordRoutes.route("/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
-  db_connect.collection("test-scp").deleteOne(myquery, function (err, obj) {
+  db_connect.collection("scps").deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");
     response.json(obj);
