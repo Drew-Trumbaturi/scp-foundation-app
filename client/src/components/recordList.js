@@ -15,7 +15,7 @@ export default function RecordList() {
   useEffect(() => {
     async function getRecords() {
       const response = await fetch(
-        `https://scp-foundation-app.herokuapp.com/record/`
+        `https://scp-app-service.onrender.com/record/`
       );
 
       if (!response.ok) {
